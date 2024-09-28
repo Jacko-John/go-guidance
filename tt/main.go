@@ -4,8 +4,8 @@ import "fmt"
 
 func test1() {
 	fmt.Println("test1")
-	a := &Person{"jacko", 20}
-	b := Person{"john", 21} // 推荐这两种形式来创建实例
+	a := &Person{"jacko", 20} // 推荐这种方式
+	b := Person{"john", 21}   // 这种方式会产生一个临时变量，然后复制给b，效率低下，还占内存
 	a.SayHello()
 	// Hello, my name is jacko.
 	b.SayHello()
